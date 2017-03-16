@@ -1,0 +1,2 @@
+# for-internship
+some questions
