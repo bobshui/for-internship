@@ -1,4 +1,4 @@
-package test2;
+package basis;
  
 class SleepJob implements Runnable {
     @Override

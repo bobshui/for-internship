@@ -1,4 +1,4 @@
-package test2;
+package basis;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -21,20 +21,20 @@ public class RefConstructor {
         System.out.println("\n-------------------------------\n");
  
         Constructor cst1 = c.getConstructor(cs);
-        System.out.println("1¡¢Í¨¹ý²ÎÊý»ñÈ¡Ö¸¶¨Class¶ÔÏóµÄ¹¹Ôì·½·¨£º");
+        System.out.println("1ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ö¸ï¿½ï¿½Classï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½");
         System.out.println(cst1.toString());
  
         Constructor cst2 = c.getDeclaredConstructor(cs);
-        System.out.println("2¡¢Í¨¹ý²ÎÊý»ñÈ¡Ö¸¶¨Class¶ÔÏóËù±íÊ¾µÄÀà»ò½Ó¿ÚµÄ¹¹Ôì·½·¨£º");
+        System.out.println("2ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ö¸ï¿½ï¿½Classï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ÚµÄ¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½");
         System.out.println(cst2.toString());
  
         Constructor cst3 = c.getEnclosingConstructor();
-        System.out.println("3¡¢»ñÈ¡±¾µØ»òÄäÃûÀàConstructor ¶ÔÏó£¬Ëü±íÊ¾»ù´¡ÀàµÄÁ¢¼´·â±Õ¹¹Ôì·½·¨¡£");
+        System.out.println("3ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Constructor ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½");
         if (cst3 != null) System.out.println(cst3.toString());
-        else System.out.println("-- Ã»ÓÐ»ñÈ¡µ½ÈÎºÎ¹¹Ôì·½·¨£¡");
+        else System.out.println("-- Ã»ï¿½Ð»ï¿½È¡ï¿½ï¿½ï¿½ÎºÎ¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½");
  
         Constructor[] csts = c.getConstructors();
-        System.out.println("4¡¢»ñÈ¡Ö¸¶¨Class¶ÔÏóµÄËùÓÐ¹¹Ôì·½·¨£º");
+        System.out.println("4ï¿½ï¿½ï¿½ï¿½È¡Ö¸ï¿½ï¿½Classï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½");
         for (int i = 0; i < csts.length; i++) {
             System.out.println(csts[i].toString());
         }
@@ -42,23 +42,23 @@ public class RefConstructor {
         System.out.println("\n-------------------------------\n");
  
         Type types1[] = c.getGenericInterfaces();
-        System.out.println("1¡¢·µ»ØÖ±½ÓÊµÏÖµÄ½Ó¿Ú£º");
+        System.out.println("1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Êµï¿½ÖµÄ½Ó¿Ú£ï¿½");
         for (int i = 0; i < types1.length; i++) {
             System.out.println(types1[i].toString());
         }
  
         Type type1 = c.getGenericSuperclass();
-        System.out.println("2¡¢·µ»ØÖ±½Ó³¬Àà£º");
+        System.out.println("2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó³ï¿½ï¿½à£º");
         System.out.println(type1.toString());
  
         Class[] cis = c.getClasses();
-        System.out.println("3¡¢·µ»Ø³¬ÀàºÍËùÓÐÊµÏÖµÄ½Ó¿Ú£º");
+        System.out.println("3ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ÖµÄ½Ó¿Ú£ï¿½");
         for (int i = 0; i < cis.length; i++) {
             System.out.println(cis[i].toString());
         }
  
         Class cs1[] = c.getInterfaces();
-        System.out.println("4¡¢ÊµÏÖµÄ½Ó¿Ú");
+        System.out.println("4ï¿½ï¿½Êµï¿½ÖµÄ½Ó¿ï¿½");
         for (int i = 0; i < cs1.length; i++) {
             System.out.println(cs1[i].toString());
         }
@@ -66,35 +66,35 @@ public class RefConstructor {
         System.out.println("\n-------------------------------\n");
  
         Field fs1[] = c.getFields();
-        System.out.println("1¡¢Àà»ò½Ó¿ÚµÄËùÓÐ¿É·ÃÎÊ¹«¹²×Ö¶Î£º");
+        System.out.println("1ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Úµï¿½ï¿½ï¿½ï¿½Ð¿É·ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ö¶Î£ï¿½");
         for (int i = 0; i < fs1.length; i++) {
             System.out.println(fs1[i].toString());
         }
  
         Field f1 = c.getField("MIN_VALUE");
-        System.out.println("2¡¢Àà»ò½Ó¿ÚµÄÖ¸¶¨ÒÑÉùÃ÷Ö¸¶¨¹«¹²³ÉÔ±×Ö¶Î£º");
+        System.out.println("2ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Úµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ö¶Î£ï¿½");
         System.out.println(f1.toString());
  
         Field fs2[] = c.getDeclaredFields();
-        System.out.println("3¡¢Àà»ò½Ó¿ÚËùÉùÃ÷µÄËùÓÐ×Ö¶Î£º");
+        System.out.println("3ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶Î£ï¿½");
         for (int i = 0; i < fs2.length; i++) {
             System.out.println(fs2[i].toString());
         }
  
         Field f2 = c.getDeclaredField("serialVersionUID");
-        System.out.println("4¡¢Àà»ò½Ó¿ÚµÄÖ¸¶¨ÒÑÉùÃ÷Ö¸¶¨×Ö¶Î£º");
+        System.out.println("4ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Úµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ö¶Î£ï¿½");
         System.out.println(f2.toString());
  
         System.out.println("\n-------------------------------\n");
  
         Method m1[] = c.getMethods();
-        System.out.println("1¡¢·µ»ØÀàËùÓÐµÄ¹«¹²³ÉÔ±·½·¨£º");
+        System.out.println("1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         for (int i = 0; i < m1.length; i++) {
             System.out.println(m1[i].toString());
         }
  
         Method m2 = c.getMethod("longValue", new Class[]{});
-        System.out.println("2¡¢·µ»ØÖ¸¶¨¹«¹²³ÉÔ±·½·¨£º");
+        System.out.println("2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         System.out.println(m2.toString());
  
     }

@@ -1,7 +1,7 @@
-package test;
+ï»¿package other;
 
 /*
- * ×ÖµäÉú³ÉËã·¨£¬Àí½â¿É²Î¿¼http://blog.csdn.net/joylnwang/article/details/7064115
+ * å­—å…¸ç”Ÿæˆç®—æ³•ï¼Œç†è§£å¯å‚è€ƒhttp://blog.csdn.net/joylnwang/article/details/7064115
  */
 
 import java.util.ArrayList;
@@ -16,23 +16,23 @@ public class Dictionary_generation_algorithm {
 		ArrayList<String> res = new ArrayList<>();
 		if (str != null && str.length() > 0) {
 			char[] seq = str.toCharArray();
-			Arrays.sort(seq); // ÅÅÁĞ
+			Arrays.sort(seq); // æ’åˆ—
 			System.out.println(seq);
-			res.add(String.valueOf(seq)); // ÏÈÊä³öÒ»¸ö½â
+			res.add(String.valueOf(seq)); // å…ˆè¾“å‡ºä¸€ä¸ªè§£
 			int len = seq.length;
 			while (true) {
-				int p = len - 1, q;// ´ÓºóÏòÇ°ÕÒÒ»¸öseq[p - 1] < seq[p]
+				int p = len - 1, q;// ä»åå‘å‰æ‰¾ä¸€ä¸ªseq[p - 1] < seq[p]
 				while (p >= 1 && seq[p - 1] >= seq[p])
 					--p;
 				if (p == 0)
-					break; // ÒÑ¾­ÊÇ¡°×îĞ¡¡±µÄÅÅÁĞ£¬ÍË³ö
-				// ´ÓpÏòºóÕÒ×îºóÒ»¸ö±Èseq[p]´óµÄÊı
+					break; // å·²ç»æ˜¯â€œæœ€å°â€çš„æ’åˆ—ï¼Œé€€å‡º
+				// ä»på‘åæ‰¾æœ€åä¸€ä¸ªæ¯”seq[p]å¤§çš„æ•°
 				q = p;
 				--p;
 				while (q < len && seq[q] > seq[p])
 					q++;
-				--q;// ½»»»ÕâÁ½¸öÎ»ÖÃÉÏµÄÖµ
-				swap(seq, q, p);// ½«pÖ®ºóµÄĞòÁĞµ¹ĞòÅÅÁĞ
+				--q;// äº¤æ¢è¿™ä¸¤ä¸ªä½ç½®ä¸Šçš„å€¼
+				swap(seq, q, p);// å°†pä¹‹åçš„åºåˆ—å€’åºæ’åˆ—
 				reverse(seq, p + 1);
 				System.out.println(seq);
 				res.add(String.valueOf(seq));

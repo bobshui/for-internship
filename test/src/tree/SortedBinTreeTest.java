@@ -1,4 +1,4 @@
-﻿package test23;
+﻿package tree;
 
 /**
  * Description:
