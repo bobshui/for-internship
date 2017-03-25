@@ -1,5 +1,7 @@
 package other;
-
+/*
+ * 递归全排列
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -37,7 +39,7 @@ public class Solution {
 			}
 	
 	public static void main(String[] args) {
-		String aa="abc";
+		String aa="aabc";
 		ArrayList<String> arr=new ArrayList<>();
 		arr=Permutation(aa);
 		for(String i:arr){
