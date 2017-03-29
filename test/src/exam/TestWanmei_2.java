@@ -43,7 +43,6 @@ public class TestWanmei_2 {
 		}
 		int total =sc.nextInt();//能带走的最大重量
 		int[][] tab = new int[n][total+1];
-		System.out.println(n);
 		
 		for (int l = weight[0]; l <= total; l++)
 			tab[n - 1][l] = value[0];

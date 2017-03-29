@@ -37,35 +37,41 @@ public class TestNetEase_1 {
 		int halfsum = sum / 2;
 
 		// 为何正经的背包没有解决此问题？因为这不是完全背包，是0-1背包！通过80%
-		// int[] time = new int[sum + 1];
+		// int[] time = new int[halfsum + 1];
 		// for (i = 0; i < mission.length; i++) {
-		// for (int j = mission[i]; j <= halfsum; j++) {
+		// for (int j = 0; j <= halfsum; j++) {
+		// if(j >= mission[i])
 		// time[j] = Math.max(time[j], time[j - mission[i]] + mission[i]);
 		// }
 		// }
-		// System.out.println(Math.max(time[halfsum], sum-time[halfsum])*1024);
+		// System.out.println(Math.max(time[halfsum], sum - time[halfsum]) *
+		// 1024);
 
 		// 改变为0-1背包后，依然不对，90%，cnm
-		// int[] value = mission;
-		// int[][] tab = new int[n][halfsum+1];
-		// for (i = mission[0]; i <= halfsum; i++)
-		// tab[n - 1][i] = value[0];
-		// for (i = 1; i < n; i++) {
-		// for (int j = mission[i]; j <= halfsum; j++) {
-		// tab[n - 1 - i][j] = Math.max(tab[n - i][j - mission[i]] + value[i],
-		// tab[n - i][j]); //核心
-		// }
-		// }
-		// System.out.println((sum - tab[0][halfsum]) * 1024);
-
-		// 为何牛客网答案可以AC?
-		int[] time = new int[sum + 1];
-		for (i = 0; i < mission.length; i++) {
-			for (int j = halfsum; j >= 0; j--) {
-				if (j >= mission[i])
-					time[j] = Math.max(time[j], time[j - mission[i]] + mission[i]);
+		// 调整完后可以使用了
+		int[] value = mission;
+		int[][] tab = new int[n][halfsum + 1];
+		for (i = mission[0]; i <= halfsum; i++)
+			tab[n - 1][i] = value[0];
+		for (i = 1; i < n; i++) {
+			for (int j = 0; j <= halfsum; j++) {
+				if (j >= mission[i]) // 核心就是这里，博客中的背包问题有误
+					tab[n - 1 - i][j] = Math.max(tab[n - i][j - mission[i]] + value[i], tab[n - i][j]); // 核心
+				else
+					tab[n - 1 - i][j] = tab[n - i][j];
 			}
 		}
-		System.out.println(Math.max(time[halfsum], sum - time[halfsum]) * 1024);
+		System.out.println((sum - tab[0][halfsum]) * 1024);
+
+		// 为何牛客网答案可以AC?非常奇怪！
+		// int[] time = new int[halfsum + 1];
+		// for (i = 0; i < mission.length; i++) {
+		// for (int j = halfsum; j >= 0; j--) {
+		// if (j >= mission[i])
+		// time[j] = Math.max(time[j], time[j - mission[i]] + mission[i]);
+		// }
+		// }
+		// System.out.println(Math.max(time[halfsum], sum - time[halfsum]) *
+		// 1024);
 	}
 }
