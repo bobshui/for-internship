@@ -18,11 +18,12 @@ public class Pack {
 		int[] weight = { 5, 4, 7, 2, 6 };
 		int[] value = { 12, 3, 10, 3, 6 };
 		int[][] tab = new int[5][13];
-		int total = 12;
+		int total = 4;
 		for (int i = weight[0]; i <= total; i++)
 			tab[n - 1][i] = value[0];
 		for (int i = 1; i < n; i++) {
-			for (int j = weight[i]; j <= total; j++) {
+			for (int j = 0; j <= total; j++) {
+				if(j>weight[i])
 				tab[n - 1 - i][j] = Math.max(tab[n - i][j - weight[i]] + value[i], tab[n - i][j]); //核心
 			}
 		}
