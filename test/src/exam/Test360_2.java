@@ -1,8 +1,5 @@
 package exam;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class Test360_2 {
