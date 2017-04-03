@@ -19,7 +19,6 @@ public class Offer22 {
 		queue.offer(root);
 		while (!queue.isEmpty()) {
 			TreeNode temp = queue.poll();
-
 			if (temp.left != null)
 				queue.offer(temp.left);
 			if (temp.right != null)
