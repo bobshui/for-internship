@@ -3,8 +3,6 @@ package exam;
 
 import java.util.Scanner;
 
-import org.omg.CORBA.ORBPackage.InconsistentTypeCode;
-
 /*
  * 现在有n位工程师�?6项工�?(编号�?0�?5)，现在给出每个人能够胜任的工作序号表(用一个字符串表示，比如：045，表示某位工程师能够胜任0号，4号，5号工�?)�?
  * 现在�?要进行工作安排，每位工程师只能被安排到自己能够胜任的工作当中去，两位工程师不能安排到同一项工作当中去�?

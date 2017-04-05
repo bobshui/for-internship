@@ -1,12 +1,10 @@
 package exam;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Scanner;
 
+//数学
 /*
  * 小易有一个长度为n序列，小易想移除掉里面的重复元素，但是小易想是对于每种元素保留最后出现的那个。小易遇到了困难,希望你来帮助他。
  * 
@@ -37,7 +35,7 @@ public class TestNetEase_4 {
 		}
 		sc.close();
 
-		//暂时没看到厉害的解法，hashset/hashmapl的效率和实现这个顺序是否要更优秀呢？
+		//暂时没看到厉害的解法，hashset/hashmap的效率和实现这个顺序是否要更优秀呢？
 		StringBuilder stringBuilder = new StringBuilder();
 		List<Integer> list = new ArrayList<>();
 		for (i = sequence.length - 1; i >= 0; i--) {

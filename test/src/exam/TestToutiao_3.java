@@ -1,7 +1,6 @@
 package exam;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 /*
  * 绘制括号序列
@@ -54,9 +53,7 @@ public class TestToutiao_3 {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		sc.close();
-
 		char[] cs = str.toCharArray();
-		
 		//Stack<Character> stack=new Stack<>();
 		for(char s:cs){
 			if(s=='['){
