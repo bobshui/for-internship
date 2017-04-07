@@ -1,7 +1,7 @@
 package tree;
 
 /*
- *包括了 
+ * 二叉树的遍历(递归与非递归)
  */
 
 import java.util.Stack;
@@ -157,6 +157,8 @@ public class binarytree {
 		System.out.println("");
 		System.out.println("后序遍历");
 		tree.thePostOrderTraversal(root);
+		
 		System.out.println("");
+		tree.thePostOrderTraversal_Stack(root);
 	}
 }
