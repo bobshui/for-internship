@@ -30,47 +30,53 @@ public class TestHuawei_3 {
 
 		int tempcount = arr[0] > arr[1] ? arr[0] : arr[1];
 		int count = arr[2] > tempcount ? arr[2] : tempcount;
-		
-		//arrayList = getlist(arr);
-		int temp=-1;
-		int temp1=-1;
-		for(int i=0;i<3;i++){
-			if(arr[i]==2){
-				temp=i;
+
+		int temp = -1;
+		int temp1 = -1;
+		for (int i = 0; i < 3; i++) {
+			if (arr[i] == 2) {
+				temp = i;
 			}
-			if(arr[i]==5){
-				temp=i;
+			if (arr[i] == 5) {
+				if (temp != -1) {
+					System.out.println(-1);
+					return;
+				}
+
+				temp = i;
 			}
-			if(arr[i]==6){
-				temp1=i;
+			if (arr[i] == 6) {
+				temp1 = i;
 			}
-			if(arr[i]==9){
-				temp1=i;
+			if (arr[i] == 9) {
+				if (temp1 != -1) {
+					System.out.println(-1);
+					return;
+				}
+				temp1 = i;
 			}
 		}
-		if(temp==-1&&temp1==-1)
-			arrayList=getlist(arr);
-		if(temp!=-1&&temp1!=-1){
-			//arrayList=getlist(arr);
-			arr[temp]=2;
-			arrayList=getlist(arr);
-			arr[temp]=5;
+		if (temp == -1 && temp1 == -1)
+			arrayList = getlist(arr);
+		if (temp != -1 && temp1 != -1) {
+			// arrayList=getlist(arr);
+			arr[temp] = 2;
+			arrayList = getlist(arr);
+			arr[temp] = 5;
 			arrayList.addAll(getlist(arr));
-			arr[temp1]=6;
-			arrayList=getlist(arr);
-			arr[temp1]=9;
+			arr[temp1] = 6;
 			arrayList.addAll(getlist(arr));
-		}
-		if(temp!=-1){
-			arr[temp]=2;
-			arrayList=getlist(arr);
-			arr[temp]=5;
+			arr[temp1] = 9;
 			arrayList.addAll(getlist(arr));
-		}
-		if(temp1!=-1){
-			arr[temp1]=6;
-			arrayList=getlist(arr);
-			arr[temp1]=9;
+		} else if (temp != -1) {
+			arr[temp] = 2;
+			arrayList = getlist(arr);
+			arr[temp] = 5;
+			arrayList.addAll(getlist(arr));
+		} else if (temp1 != -1) {
+			arr[temp1] = 6;
+			arrayList = getlist(arr);
+			arr[temp1] = 9;
 			arrayList.addAll(getlist(arr));
 		}
 
@@ -81,7 +87,6 @@ public class TestHuawei_3 {
 				result.add(num);
 		}
 
-	
 		System.out.println(result.get(count - 1));
 
 	}
