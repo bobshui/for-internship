@@ -8,12 +8,15 @@ https://www.nowcoder.com/discuss/19724?type=2&order=0&pos=9&page=2
 //自我介绍： 
 
 Java基础： 
-//1.hashmap是怎么实现的： 
-//2.Java反射机制： 
-//3.接口和抽象类的区别： 
-//4.Java5以后的注解： 
-//5.volatile关键字的含义，原理；
-//6.介绍 Java 的四种引用类型以及应用场景； //深入理解Java的4种引用类型,http://blog.csdn.net/woblog/article/details/51332342
+//1.hashmap是怎么实现的
+//2.Java反射机制
+//3.接口和抽象类的区别
+//4.Java5以后的注解
+//5.volatile关键字的含义,原理
+//6.介绍 Java的四种引用类型以及应用场景    //深入理解Java的4种引用类型,http://blog.csdn.net/woblog/article/details/51332342
+7.介绍 Java内存模型
+//8.异步并发,Future 用法    //Java线程(七)：Callable和Future,http://blog.csdn.net/ghsau/article/details/7451464
+9.JUC 下面的内容，锁，CountdownLatch，CyclicBarrier，实现原理；
 
 Java虚拟机： 
 //5.类加载class loader： 
@@ -23,17 +26,22 @@ Java框架：
 1.spring，structs 
 
 数据库： 
-1.oracle分页查询： 
+1.oracle分页查询
+2.MySQL两种引擎的区别    //http://blog.csdn.net/ls5718/article/details/52248040
+3.索引    //http://www.cnblogs.com/chenshishuo/p/5030029.html
 
 设计模式： 
 //1.单例模式： 
 
 算法：
 //1.递归可能造成什么问题，为什么，怎么解决；
-2.手写快排，如何改进；
+//2.手写快排，如何改进；
 
-通过平时什么样的学习
+其他
 1.对it行业哪些领域感兴趣
+2.聊人生，聊规划，为啥想来 360
+3.聊兴趣爱好
+4.最大的缺点
 
 计算机网络： 
 //1.tcp协议和udp协议的区别： 
@@ -44,26 +52,11 @@ Java框架：
 总结：
 对框架要有了解！！！
 
-  异步并发，Future 用法；
-  JUC 下面的内容，锁，CountdownLatch，CyclicBarrier，实现原理；
+
+
   线程池；
-  
-  介绍 Java 内存模型；
   介绍垃圾收集器，CMS 和 G1 的区别，G1 的优点；
 
-  介绍对 Redis 的了解；
-  介绍论文；
+  介绍对 Redis的了解；
   动态代理的原理，JDK 实现和 CGLib 实现的区别；
   SpringMVC 的原理。
-
-二面
-
-  聊项目；
-  
-  最大的缺点；
-  兴趣爱好。
-
-三面 · 综合面
-
-  聊人生，聊规划，为啥想来 360；
-  聊兴趣爱好。

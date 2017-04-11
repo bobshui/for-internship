@@ -9,19 +9,35 @@ import java.util.PriorityQueue;
  */
 
 public class Offer63 {
-	public static void main(String[] args) {
-		PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(15,new Comparator<Integer>() {
+	private int count = 0;
+	private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+	private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(15, new Comparator<Integer>() {
 
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				// TODO Auto-generated method stub
-				return o2-o1;
-			}
-		});
-		minHeap.offer(2);
-		minHeap.offer(4);
-		minHeap.offer(3);
-		while(!minHeap.isEmpty())
-		System.out.println(minHeap.poll());
+		@Override
+		public int compare(Integer o1, Integer o2) {
+			// TODO Auto-generated method stub
+			return o2 - o1;
+		}
+	});
+
+	public void Insert(Integer num) {
+		if (count % 2 == 0) {
+			minHeap.offer(num);
+			int temp = minHeap.poll();
+			maxHeap.offer(temp);
+		} else {
+			maxHeap.offer(num);
+			int temp = maxHeap.poll();
+			minHeap.offer(temp);
+		}
+		count++;
 	}
+
+	public Double GetMedian() {
+		if (count % 2 == 0)
+			return (double) (maxHeap.peek() + minHeap.peek()) / 2;
+		else
+			return (double) maxHeap.peek();
+	}
+
 }

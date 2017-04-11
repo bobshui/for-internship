@@ -2,7 +2,7 @@ package sort;
 
 public class Merge {
 
-	public static int count;
+	//public static int count;
 	
 	public static void MergeSort(int[] arr, int low, int high) {
 		int mid = (low + high) / 2;
@@ -23,7 +23,7 @@ public class Merge {
 				temp[t++] = arr[i++];
 			else{
 				temp[t++] = arr[j++];
-				count+=m-i+1;
+				//count+=m-i+1;
 			}
 		}
 		
@@ -41,10 +41,10 @@ public class Merge {
 	public static void main(String[] args) {
 		int[] arr = { 4, 6, 7, 2, 9, 5, 1, 3, 8 };
 		//int[] arr = { 5, 1 };
-		count=0;
+		//count=0;
 		MergeSort(arr, 0, arr.length - 1);
 		for (int i : arr)
 			System.out.println(i);
-		System.out.println("count:"+count);
+		//System.out.println("count:"+count);
 	}
 }
