@@ -2,8 +2,6 @@ package newcoder;
 
 import java.util.ArrayList;
 
-import javax.swing.SpringLayout.Constraints;
-
 public class Offer42 {
 	public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
 		ArrayList<Integer> arrayList = new ArrayList<>();

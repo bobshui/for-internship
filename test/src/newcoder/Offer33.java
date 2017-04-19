@@ -1,7 +1,5 @@
 package newcoder;
 
-import java.sql.ResultSet;
-
 public class Offer33 {
 	public static int GetUglyNumber_Solution2(int index) {
 		int count=8;

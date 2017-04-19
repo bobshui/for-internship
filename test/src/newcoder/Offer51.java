@@ -1,7 +1,5 @@
 package newcoder;
 
-import java.util.ArrayList;
-
 public class Offer51 {
 	    public int[] multiply(int[] A) {
 	    	int len=A.length;
