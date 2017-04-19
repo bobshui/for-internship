@@ -1,5 +1,9 @@
 package exam;
 
+/*
+ * 题目掉了
+ */
+
 import java.util.HashSet;
 import java.util.Scanner;
 

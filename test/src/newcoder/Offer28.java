@@ -3,7 +3,7 @@ package newcoder;
 import java.util.HashMap;
 import java.util.Map;
 
-public class offer28 {
+public class Offer28 {
 
 	public static int MoreThanHalfNum_Solution(int [] array){
 		Map<Integer, Integer> map = new HashMap<>();

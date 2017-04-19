@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class offer27 {
+public class Offer27 {
 	public static ArrayList<String> Permutation(String str) {
 		ArrayList<String> result=new ArrayList<>();
 		

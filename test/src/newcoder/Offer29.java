@@ -2,7 +2,7 @@ package newcoder;
 
 import java.util.ArrayList;
 
-public class offer29 {
+public class Offer29 {
 	public static ArrayList<Integer> GetLeastNumbers_Solution(int [] input,int k){
 		int temp;
 		ArrayList<Integer> arr= new ArrayList<>();
