@@ -27,7 +27,7 @@ public class TestNetEase_1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int[] mission = new int[n];
+		int[] mission = new int[n]; //各个任务的长度
 		int i = 0;
 		int sum = 0;
 		for (i = 0; i < n; i++) {
@@ -64,7 +64,7 @@ public class TestNetEase_1 {
 		}
 		System.out.println((sum - tab[0][halfsum]) * 1024);
 
-		// 为何牛客网答案可以AC?非常奇怪！
+		// 为何牛客网答案可以用一维数组AC?非常奇怪！因为他是倒叙的！
 		// int[] time = new int[halfsum + 1];
 		// for (i = 0; i < mission.length; i++) {
 		// for (int j = halfsum; j >= 0; j--) {

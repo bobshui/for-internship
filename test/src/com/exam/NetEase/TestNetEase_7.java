@@ -23,6 +23,7 @@ import java.util.Scanner;
  * 10
  */
 
+//似乎并没有太多的说法
 public class TestNetEase_7 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
