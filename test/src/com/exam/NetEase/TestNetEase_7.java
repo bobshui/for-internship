@@ -1,4 +1,4 @@
-package exam;
+package com.exam.NetEase;
 
 import java.util.HashSet;
 import java.util.Scanner;

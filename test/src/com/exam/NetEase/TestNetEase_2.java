@@ -1,4 +1,4 @@
-package exam;
+package com.exam.NetEase;
 
 //数学
 /*
