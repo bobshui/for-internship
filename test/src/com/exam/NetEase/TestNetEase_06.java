@@ -29,7 +29,7 @@ import java.util.Scanner;
  * 720
  */
 
-public class TestNetEase_6 {
+public class TestNetEase_06 {
 
 	private static int count = 0,n=0;
 

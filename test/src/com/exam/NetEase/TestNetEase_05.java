@@ -24,7 +24,7 @@ import java.util.Scanner;
  */
 
 //主要思想是矩阵的快速幂，在剑指offer的斐波那契数列里面有讲到
-public class TestNetEase_5 {
+public class TestNetEase_05 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();

@@ -24,7 +24,7 @@ import java.util.Scanner;
  */
 
 //似乎并没有太多的说法
-public class TestNetEase_7 {
+public class TestNetEase_07 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int w=sc.nextInt();

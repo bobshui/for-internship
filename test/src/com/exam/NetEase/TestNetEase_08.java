@@ -22,15 +22,37 @@ import java.util.Scanner;
  * 
  */
 
-public class TestNetEase_8 {
+public class TestNetEase_08 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int w=sc.nextInt();
-		int x=sc.nextInt();
-		int y=sc.nextInt();
-		int z=sc.nextInt();
+		String str=sc.nextLine();
 		sc.close();
 
+		int temp=str.charAt(0)-'0';
+		for(int i=1;i<str.length()-1;){
+			char a =str.charAt(i);
+			StringBuilder sb=new StringBuilder();
+			i++;
+			while(i<str.length()&&str.charAt(i)>='0'&&str.charAt(i)<='9'){
+				sb.append(str.charAt(i));
+				i++;
+			}
+			int r = Integer.valueOf(sb.toString());
+			switch (a) {
+			case '+':
+				temp+=r;
+				break;
+			case '-':
+				temp-=r;
+				break;
+			case '*':
+				temp*=r;
+				break;
+			default:
+				break;
+			}
+		}
+		System.out.println(temp);
 		
 	}
 }

@@ -24,7 +24,7 @@ import java.util.Scanner;
  * 99 100
  */
 
-public class TestNetEase_4 {
+public class TestNetEase_04 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();

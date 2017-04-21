@@ -23,7 +23,7 @@ import java.util.Scanner;
  * 输出例子:
  * 9216
  */
-public class TestNetEase_1 {
+public class TestNetEase_01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
