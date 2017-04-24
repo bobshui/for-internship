@@ -1,6 +1,7 @@
 package com.exam.NetEase;
 
-//数学
+//编程
+
 /*
  * 终于到周末啦！小易走在市区的街道上准备找朋友聚会，突然服务器发来警报,小易需要立即回公司修复这个紧急bug。
  * 假设市区是一个无限大的区域，每条街道假设坐标是(X，Y)，小易当前在(0，0)街道，办公室在(gx,gy)街道上。
@@ -28,6 +29,7 @@ package com.exam.NetEase;
  * 输出例子:
  * 42
  */
+
 import java.util.Scanner;
 
 public class TestNetEase_02 {

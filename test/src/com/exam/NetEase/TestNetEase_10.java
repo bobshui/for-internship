@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+//编程
+
 /*
  * 小易参与了一个记单词的小游戏。游戏开始系统提供了m个不同的单词，小易记忆一段时间之后需要在纸上写出他记住的单词。
  * 小易一共写出了n个他能记住的单词，如果小易写出的单词是在系统提供的，将获得这个单词长度的平方的分数。
@@ -27,6 +29,7 @@ import java.util.Set;
  * 136
  * 
  */
+
 public class TestNetEase_10 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

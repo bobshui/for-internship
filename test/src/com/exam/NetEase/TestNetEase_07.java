@@ -3,6 +3,8 @@ package com.exam.NetEase;
 import java.util.HashSet;
 import java.util.Scanner;
 
+//编程
+
 /*
  * 小易最近在数学课上学习到了集合的概念,集合有三个特征：1.确定性 2.互异性 3.无序性.
  * 小易的老师给了小易这样一个集合：
