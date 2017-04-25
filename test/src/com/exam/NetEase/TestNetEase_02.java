@@ -51,7 +51,7 @@ public class TestNetEase_02 {
 		taxitime = sc.nextInt();
 		sc.close();
 		
-		//没有见到很优秀的解法，评论区表示答案有错，似乎也确实是。
+		//没有见到很优秀的解法，评论区表示答案有错，似乎也确实是。穷举比较了。
 		int walk=(Math.abs(xdes)+Math.abs(ydes))*walktime;
 		if(walktime<=taxitime){
 			System.out.println(walk);

@@ -25,18 +25,48 @@ import java.util.Scanner;
  * 5
  */
 
+//纯抄袭，不是很好理解状态的转换，请看注释
 public class TestNetEase_11 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int[] arr=new int[n];
-		int sum=0;
+		int[] arr = new int[n];
+		int sum = 0;
 		for (int i = 0; i < n; i++) {
-			arr[i]=sc.nextInt();
-			sum+=arr[i];
+			arr[i] = sc.nextInt();
+			sum += arr[i];
 		}
 		sc.close();
-		
+		/*
+		 * 假设砖块分为A，B两堆，dp[i][j]中的j表示B-A的长度。 因为B-A有可能是负的，所以j整体偏移sum个长度，即2*sum+1。
+		 * 而dp[i][j]的值则表示当A-B的值为j时，B的最大长度是多少。 
+		 * dp[i][j] = dp[i-1][j]表示我不用第i块砖
+		 * dp[i][j] = max(dp[i-1][j-h], dp[i-1][j])表示我把砖放在A堆。
+		 * dp[i][j] = max(dp[i-1][j+h]+h, dp[i-1][j])表示我把砖放在B堆。 
+		 * 然后会爆内存，所以用了“滚动数组”。
+		 */
 		int[] dp0 = new int[sum * 2 + 1], dp1 = new int[sum * 2 + 1];
+		//初始化，在一块砖的没有放的时候，B-A只能为0。
+		for (int i = 0; i < dp0.length; i++)
+			dp0[i] = -1;
+		dp0[sum] = 0;
+		for (int i = 1; i <= n; i++) {
+			int v = arr[i - 1];
+			for (int j = 0; j < 2 * sum + 1; j++) {
+				dp1[j] = dp0[j];
+				if (j - v >= 0 && dp0[j - v] != -1)
+					dp1[j] = Math.max(dp0[j - v], dp1[j]);  //放在A堆
+				if (j + v <= 2 * sum && dp0[j + v] != -1)
+					dp1[j] = Math.max(dp0[j + v] + v, dp1[j]);  //放在B堆
+			}
+			//滚动数组
+			int[] temp = dp1;
+			dp1 = dp0;
+			dp0 = temp;
+		}
+		if (dp0[sum] == 0)
+			System.out.println(-1);
+		else
+			System.out.println(dp0[sum]);
 	}
 }
