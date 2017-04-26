@@ -23,7 +23,7 @@ import java.util.Scanner;
  * 样例输出
  * 1
  */
-public class Test360_08 {
+public class Test360_04 {
 	public static void main(String[] args) {
 		// 这个用了map，复杂度应为O(n*n),但是并不能通过
 		Scanner in = new Scanner(System.in);
@@ -59,7 +59,7 @@ public class Test360_08 {
 		System.out.println(count);
 		in.close();
 
-		/*
+		/* 有点神奇的算法，并没有理解透彻
 		Scanner sc = new Scanner(System.in);
 		while (sc.hasNext()) {
 			String T = sc.next();

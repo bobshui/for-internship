@@ -1,5 +1,6 @@
 package com.exam.Qihoo360;
 
+//纯逻辑
 import java.util.Scanner;
 
 /*
@@ -37,6 +38,7 @@ import java.util.Scanner;
 
 public class Test360_01 {
 	public static void main(String[] args) {
+		//笔试时自己写的解法
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int m = in.nextInt();
@@ -69,7 +71,7 @@ public class Test360_01 {
 			System.out.println(res);
 		in.close();
 
-		/*
+		/*思路差不多，写的更加简略
 		Scanner scanner = new Scanner(System.in);
 		int n,m;
 		n=scanner.nextInt();

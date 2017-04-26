@@ -25,7 +25,7 @@ import java.util.Scanner;
  * 0.800
 
  */
-public class Test360_09 {
+public class Test360_05 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
