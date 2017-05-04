@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * */
 
 public class Offer03 {
-	//练一练链表的逆序
+	//练一练链表的逆序,但是这个有一定问题，会打乱原有的链表结构
 	public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 		ArrayList<Integer> arrayList=new ArrayList<>();
         if(listNode==null)
