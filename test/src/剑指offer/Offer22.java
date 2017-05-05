@@ -9,6 +9,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Offer22 {
+
+	// 其他遍历方法前中后更需要好好掌握，递归非递归
 	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
 		ArrayList<Integer> list = new ArrayList<>();
 		if (root == null)
@@ -24,8 +26,8 @@ public class Offer22 {
 				queue.offer(temp.right);
 			list.add(temp.val);
 		}
-
 		return list;
-
 	}
+
+	// 扩展：广度优先遍历有向图也是同理
 }
