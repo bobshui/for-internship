@@ -1,6 +1,12 @@
 package 剑指offer;
 
+/* 33丑数
+ * 把只包含因子2、3和5的数称作丑数（Ugly Number）。
+ * 例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。
+ */
+
 public class Offer33 {
+	//一看就是硬算，无聊
 	public static int GetUglyNumber_Solution2(int index) {
 		int count=8;
 		if(index<7)
@@ -44,6 +50,4 @@ public class Offer33 {
 		int i=GetUglyNumber_Solution(100);
 		System.out.println(i);
 	}
-	
-	
 }
