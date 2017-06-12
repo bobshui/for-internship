@@ -1,6 +1,10 @@
 package 剑指offer;
 
-import 剑指offer.Offer38.TreeNode;
+/* 39.平衡二叉树
+ * 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
+ */
+
+import 剑指offer.TreeNode;
 
 public class Offer39 {
 	
@@ -13,6 +17,7 @@ public class Offer39 {
 			return flag;
 		}
 
+		//其实是后续遍历，一边遍历一边求子树的高度，所以总节点只需要遍历一次即可
 		public int Jugde(TreeNode root) {
 			if (root == null)
 				return 0;
