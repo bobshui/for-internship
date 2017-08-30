@@ -8,14 +8,14 @@ import java.util.ArrayList;
 
 public class Offer24 {
 
-	//和剑指offer中的方法本质是相同的，但是写的简略，和c++好像还有点不同
+	// 和剑指offer中的方法本质是相同的，但是写的简略，和c++好像还有点不同
 	public ArrayList<ArrayList<Integer>> arrayLists = new ArrayList<>();
 
 	public ArrayList<Integer> list = new ArrayList<>();
 
 	public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
-		if(root==null)
-		return arrayLists;
+		if (root == null)
+			return arrayLists;
 		list.add(root.val);
 		target = target - root.val;
 		if (target == 0 && root.left == null && root.right == null)
@@ -23,7 +23,7 @@ public class Offer24 {
 
 		FindPath(root.left, target);
 		FindPath(root.right, target);
-		list.remove(list.size()-1);
+		list.remove(list.size() - 1);
 		return arrayLists;
 	}
 }
