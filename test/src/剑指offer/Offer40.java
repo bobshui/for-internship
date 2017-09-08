@@ -8,8 +8,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 //书中要求时间复杂度为O(n),空间复杂度为O(1),采用的异或来实现,然而一共有两个只出现一次的数字，如何把他们依然通过异或区分出来呢？
-//可以通过从头到尾异或后为1的那一位来把数组分为两部分，这两个数一定会被分开
+//可以通过从头到尾异或后为1的那一位来把数组分为两部分，这两个数一定会被分开，但是这个其实很难想
 
+//自己写的 并没有什么道理的方法
 public class Offer40 {
 	public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
 		 Set<Integer> set=new HashSet<>();

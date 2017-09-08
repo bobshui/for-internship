@@ -1,24 +1,24 @@
 package test;
 
-import java.util.LinkedList;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
-	public class Test
+public class Test extends Test2{
+	
+	static
 	{
-	    static boolean foo(char c)
-	    {
-	        System.out.print(c);
-	        return true;
-	    }
-	    public static void main( String[] argv )
-	    {
-	        int i = 0;
-	        for ( foo('A'); foo('B') && (i < 2); foo('C'))
-	        {
-	            i++ ;
-	            foo('D');
-	        }
-	    }
+		System.out.println("s1");
+	}
+	{
+		System.out.println("s2");
 	}
 	
+	
+
+public Test(){
+	System.out.println("s3");
+}
+
+public static void main(String[] args) {
+	new Test();
+}
+
+}
